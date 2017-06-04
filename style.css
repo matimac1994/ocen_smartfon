@@ -1,0 +1,273 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  text-align: center;
+  padding: 5px;
+  height:100%;
+  width: 100%;
+  margin: auto;
+}
+
+.rating > input { display: none; visibility: hidden;} 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #000; 
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+.rating_stars{
+	width: 286px;
+	margin: auto;
+}
+
+.stars{
+	width: 300px;
+	margin: auto;
+}
+
+span.stars, span.stars span {
+    display: block;
+    background: url(gwiazdki.png) 0 -26px repeat-x;
+    width: 270px;
+    height: 26px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+html, body {
+	margin: auto;
+	background-color: #DDDDDD;
+	padding: 0px 0px;
+	text-align: center;
+	height: 100%;
+}
+
+#container{
+	padding-top: 70px;
+	 margin-left: auto;
+	 margin-right: auto;
+	 width: 100%;
+	 text-align: center;
+	 min-height: 100%;
+	 height: auto !important;
+	 height: 100%;
+	 position: relative;
+}
+
+#panel{
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+};
+
+.wyrownaj_form{
+	font-size: 15px;
+	text-align: right;
+	float: left;
+	margin: auto;
+}
+
+.loginPanel{
+	position: relative;
+	width: 25%;
+	margin: 1% 1% 1% 1%;
+	padding: 1% 1% 1% 1%;
+	text-align: center;
+	box-shadow: 0px 0px 0px 5px rgba(255,255,255, 0.2), 0px 4px 20px rgba(0,0,0, 0.33);
+	float: left;
+	min-width: 250px;
+	left: 21%;
+}
+
+input[type=text], input[type=password] {
+	margin: 2px 2px 2px 2px;
+}
+
+label.zmien_dane {
+    display: inline-block;
+    width:150px;
+    text-align: right;
+}
+
+label.pokaz_dane {
+    display: inline-block;
+    width:300px;
+    text-align: left;
+}
+
+#main-page
+{
+	margin-top:2%;
+	margin-bottom:2%;
+    margin-left: 15%;
+    margin-right: 10%;
+    float: left;
+    height: 80%;
+    width: 70%;
+    top: 10%;
+    left: 0%;
+    padding:0;
+    border-radius: 10px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.tresc_index
+{
+    display: inline-block;
+    color: black;
+    padding: 2%;
+    width:96%;
+}
+
+.submit {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.mainBar{
+	width: 100%;
+	height: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px; 
+	background-color: #306BAC;
+	min-width: 1000px;
+	position: fixed;
+	z-index: 999;
+}
+
+#logo{
+	float: left;
+	padding-left: 5px;
+	width: 425px;
+	height: 60px;
+}
+
+.nav{
+	float: right;
+	width: calc(100%-430px);
+}
+
+#barZaloguj{
+	float: right;
+	font-size: 20px;
+	width: 125px;
+	height: 40px;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	position: relative;
+	color: #ffffff;
+}
+
+#barZaloguj:hover{
+	background-color: #417CBD;
+}
+
+#barInfo{
+	float: right;
+	font-size: 15px;
+	width: 125px;
+	height: 60px;
+	padding-top: 0;
+	text-align: center;
+	position: relative;
+	color: #ffffff;
+}
+
+a.logout:link, a.logout:visited{
+	text-decoration: none;
+	color: #ffffff;
+	margin-top: 3px;
+	padding: 3px 10px;
+	text-align: center;
+	background-color: #417CBD;
+	display: inline-block;
+}
+
+
+a.logout:hover {
+    color: red;
+}
+
+a.profile:link, a.profile:visited, a.profile:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.ocena{
+	clear: both;
+	text-align: center;
+	margin: auto;
+	width: 50%;
+}
+
+fieldset{
+	text-align: center;
+	border:none; 
+	padding: 5px;
+	height:100%;
+	width: 100%;
+	margin: auto;
+}
+
+fieldset > legend{
+	text-align: center;
+}
+
+form{
+	margin: auto;
+}
+
+#push{
+	clear: both;
+}
+
+footer{
+	position: relative;
+	padding-top: 1px;
+	clear: both;
+	width: 100%;
+	height: 50px;
+	background-color: #BBBBBB;
+	color: white;
+	bottom:0;
+}
